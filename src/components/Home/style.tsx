@@ -22,22 +22,90 @@ export const Content = styled.div`
   width: 1000px;
   height: 600px;
 
-  box-shadow: 20px 20px 40px black;
+  box-shadow: 30px 30px 30px black;
+
+
+  //desktopLG
+  @media(min-width: 1600px) {
+    width: 2000px;
+    height: 1200px;
+  }
   
   div {
     color: white;
-    border: solid 1px red;
 
     position: absolute;
     right: 0;
-    width: 50%;
+    width: 60%;
     height: 100%;
 
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    gap: ${pixelToRem(103)};
+    gap: ${pixelToRem(80)};
+
+    //mobile
+    @media(max-width: 850px) {
+      width: 100%;
+
+      gap: ${pixelToRem(50)}
+    }
+
+    span {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+      h1 {
+        font-size: ${pixelToRem(90)};
+
+        text-shadow: 0px 0px 10px #000000;
+        
+        //desktopLG
+        @media(min-width: 1600px) {
+          font-size: ${pixelToRem(190)};
+          text-shadow: 0px 0px 100px black;
+        }
+
+        //mobile
+        @media(max-width: 850px) {
+          font-size: ${pixelToRem(60)};
+        }
+      }
+
+      p {
+        font-size: ${pixelToRem(25)};
+
+        text-shadow: 0px 0px 20px black;
+
+        //desktopLG
+        @media(min-width: 1600px) {
+          font-size: ${pixelToRem(50)};
+        }
+
+        //mobile
+        @media(max-width: 850px) {
+          font-size: ${pixelToRem(15)};
+        }
+
+      }
+    }
+
+    section {
+      width: 65%;
+      display: flex;
+      justify-content: space-between;
+      
+      @media(max-width: 850px) {
+        width: 50%;
+
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+    }
+
   }
 `;
 
@@ -53,12 +121,27 @@ export const Button = styled.button`
   height: ${pixelToRem(51)};
   border: solid 1px white;
 
-  transition: 0.5s;
+  transition: 0.3s;
 
   &:hover {
     background: white;
     color: black;
-    border: solid 1px black;
+  }
+
+  @media(min-width: 1600px) {
+    width: ${pixelToRem(480)};
+    height: ${pixelToRem(123)};
+
+    border-radius: 75px;
+
+    font-size: ${pixelToRem(40)};
+  }
+
+  @media(max-width: 720px) {
+    /* width: ${pixelToRem(160)};
+    height: ${pixelToRem(41)};
+
+    font-size: ${pixelToRem(18)}; */
   }
 `;
 

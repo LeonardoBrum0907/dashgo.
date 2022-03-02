@@ -12,7 +12,7 @@ export function Home() {
         <div>
 
           <span>
-            <h1>Hello world</h1>
+            <h1>Hi, I'm Léo.</h1>
             <p>I'm a Front-end web developer</p>
           </span>
           <section>
